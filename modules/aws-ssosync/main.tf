@@ -73,7 +73,7 @@ resource "aws_lambda_function" "ssosync" {
   description      = "Syncs Google Workspace users and groups to AWS SSO"
   role             = aws_iam_role.default[0].arn
   handler          = "ssosync"
-  runtime          = "go1.x"
+  runtime          = "provided.al2023"
   timeout          = 300
   memory_size      = 128
 
